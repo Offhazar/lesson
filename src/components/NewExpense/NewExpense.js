@@ -5,17 +5,19 @@ import './NewExpense.css';
 //это не врапер компонента
 const NewExpense = (props) => {
   //lifting up method
-  const saveExpenseDateHundler = (data) => {
-    let expenseData = {
-      ...data,
+
+  const saveExpenseDataHundler = (enteredExpenseData) => {
+    const expenseData = {
+      ...enteredExpenseData,
       id: Math.random().toString(),
     };
-    props.onAddExpense(expenseData);
+
+    props.onAddEXpnese(expenseData);
   };
 
   return (
     <div className="new-expense">
-      <ExpenseForm onSaveExpenseData={saveExpenseDateHundler} />
+      <ExpenseForm onSaveExpenseDate={saveExpenseDataHundler} />
     </div>
   );
 };

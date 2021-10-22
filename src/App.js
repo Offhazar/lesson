@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Expenses from './components/Expense/Expenses';
 import NewExpense from './components/NewExpense/NewExpense';
 
-const expenses = [
+const INIT_STATE = [
   {
     id: 'e1',
     title: 'Toilet Paper',
@@ -30,18 +30,27 @@ const expenses = [
 ];
 
 function App() {
-  const [expenseData, setExpenseData] = useState(expenses);
+  // const [expenseData, setExpenseData] = useState(expenses);
 
-  const addExpenseHundles = (expense) => {
-    console.log('in');
-    console.log(expense);
-    setExpenseData([...expenseData, expense]);
+  // const addExpenseHundles = (expense) => {
+  //   console.log('in');
+  //   console.log(expense);
+  //   setExpenseData([...expenseData, expense]);
+  // };
+
+  const [expenses, setExpenses] = useState(INIT_STATE);
+
+  const addExpenseHundler = (props) => {
+    console.log(props);
+    setExpenses((prevState) => {
+      return [props, ...prevState];
+    });
   };
 
   return (
     <div>
-      <NewExpense onAddExpense={addExpenseHundles} />
-      <Expenses expenses={expenseData} />
+      <NewExpense onAddEXpnese={addExpenseHundler} />
+      <Expenses expenses={expenses} />
     </div>
   );
 }
