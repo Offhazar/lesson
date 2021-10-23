@@ -2,7 +2,7 @@ import { useState } from 'react/cjs/react.development';
 import React from 'react';
 
 function Form(props) {
-  const [name, setName] = useState('');
+  const [name, setName] = useState(''); // name
   const [comment, setComment] = useState('');
   const [date, setDate] = useState('1998');
 
@@ -25,9 +25,10 @@ function Form(props) {
       comment,
       date,
     };
+
     setName('');
     setComment('');
-    setDate({});
+    setDate('');
 
     props.onAdd(data);
   }
