@@ -14,7 +14,6 @@ const NewExpense = (props) => {
 
     props.onAddEXpnese(expenseData);
   };
-
   return (
     <div className="new-expense">
       <ExpenseForm onSaveExpenseDate={saveExpenseDataHundler} />
