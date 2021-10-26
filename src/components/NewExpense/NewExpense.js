@@ -14,9 +14,19 @@ const NewExpense = (props) => {
 
     props.onAddEXpnese(expenseData);
   };
+  const App = () => {
+    const [visible, setVisible] = React.useState(false);
+    return (
+      <div>
+        <button onClick={() => setVisible(true)}>Show</button>
+        <button onClick={() => setVisible(false)}>Hide</button>
+        {visible && <ExpenseForm onSaveExpenseDate={saveExpenseDataHundler} />}
+      </div>
+    );
+  };
   return (
     <div className="new-expense">
-      <ExpenseForm onSaveExpenseDate={saveExpenseDataHundler} />
+      <App />
     </div>
   );
 };
