@@ -6,22 +6,23 @@ import './App.css';
 
 const App = () => {
   const [courseGoals, setCourseGoals] = useState([
+    //открылы useState c первоначальным значением
     { text: 'Do all exercises!', id: 'g1' },
     { text: 'Finish the course!', id: 'g2' },
   ]);
 
-  const addGoalHandler = (enteredText) => {
-    setCourseGoals((prevGoals) => {
-      const updatedGoals = [...prevGoals];
-      updatedGoals.unshift({ text: enteredText, id: Math.random().toString() });
-      return updatedGoals;
+  const addGoalHandler = (enteredText) => { //Lifting up
+    setCourseGoals((prevGoals) => { 
+      const updatedGoals = [...prevGoals];//открываем переменную и записываем туда старое значение
+      updatedGoals.unshift({ text: enteredText, id: Math.random().toString() });//добавляем обьект с помощью lifting up
+      return updatedGoals;//и возвращаем updatedGoals в courseGoals
     });
   };
 
-  const deleteItemHandler = (goalId) => {
+  const deleteItemHandler = (goalId) => { //lifting up
     setCourseGoals((prevGoals) => {
-      const updatedGoals = prevGoals.filter((goal) => goal.id !== goalId);
-      return updatedGoals;
+      const updatedGoals = prevGoals.filter((goal) => goal.id !== goalId);//открываем переменную и и фильтруемполученный id со всеми id
+      return updatedGoals;//обновляеться courseGoals
     });
   };
 
@@ -31,14 +32,17 @@ const App = () => {
 
   if (courseGoals.length > 0) {
     content = (
-      <CourseGoalList items={courseGoals} onDeleteItem={deleteItemHandler} />
+      <CourseGoalList items={courseGoals} onDeleteItem={deleteItemHandler} /> //если content больше нулю CourseGoalList
     );
   }
+
+  //на 44 передаем функцие через пропс что бы работал lifting up
 
   return (
     <div>
       <section id="goal-form">
-        <CourseInput onAddGoal={addGoalHandler} />
+        <CourseInput onAddGoal={addGoalHandler} /> 
+
       </section>
       <section id="goals">
         {content}
