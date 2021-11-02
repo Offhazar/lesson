@@ -2,6 +2,7 @@ import Button from '../UI/Button';
 import H1 from '../UI/H1';
 import Pteg from '../UI/Pteg';
 import Div from '../UI/Div';
+import './Block3.css';
 
 function Block3() {
   return (
@@ -11,7 +12,9 @@ function Block3() {
         Lorem ipsum dolor sit ame consetetur adipsicing elit,sed do eiusmod
         tempor ut labore et dolore magna
       </Pteg>
-      <Button>view more</Button>
+      <div className="butto">
+        <Button>view more</Button>
+      </div>
     </Div>
   );
 }
