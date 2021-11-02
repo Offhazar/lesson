@@ -1,0 +1,11 @@
+.Block2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 720px;
+  width: 1000px;
+  margin: 0 auto;
+  background-image: url('https://windoworld.ru/a4/grid/1/6.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
