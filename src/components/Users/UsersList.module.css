@@ -14,3 +14,6 @@
   margin: 0.5rem;
   padding: 0.5rem;
 }
+.users button {
+  background: rgb(119, 119, 32);
+}

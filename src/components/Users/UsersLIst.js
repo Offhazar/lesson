@@ -17,14 +17,14 @@ const UsersList = (props) => {
             <DelatModal active={modalActive} setActive={setModalActive}>
               <div>
                 <div>
-                  <h1>удалить?</h1>
+                  <h1>Удалить?</h1>
                   <Button
                     onClick={() => {
                       props.onFilter(user.id);
                       setModalActive(false);
                     }}
                   >
-                    DA
+                    Dа
                   </Button>
                   <Button onClick={() => setModalActive(false)}>Net</Button>
                 </div>
