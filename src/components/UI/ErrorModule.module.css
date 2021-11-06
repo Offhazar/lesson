@@ -5,7 +5,7 @@
   width: 100%;
   height: 100vh;
   z-index: 10;
-  background: rgb(56, 49, 49);
+  background: rgb(215, 1, 1, 0.4);
 }
 .modal {
   position: fixed;
@@ -16,15 +16,17 @@
   overflow: hidden;
 }
 .header {
-  background: rgb(179, 102, 179);
+  background: rgb(202, 17, 202);
   padding: 1rem;
 }
 .header h2 {
-  margin: 0;
-  color: rgb(177, 154, 154);
+  margin: 0 auto;
+  color: rgb(31, 26, 26);
 }
 .content {
   padding: 1rem;
+  background: white;
+  height: 100px;
 }
 .actions {
   padding: 1rem;

@@ -4,5 +4,8 @@
 
 html {
   font-family: sans-serif;
-  background: rgba(43, 33, 33, 0.301);
+  background: rgb(241, 241, 245);
+  background-image: url(https://s1.1zoom.ru/b5050/205/Closeup_Ferrari_F12_Berlinetta_Headlights_Black_562279_1920x1080.jpg);
+  background-position: center;
+  background-repeat: inherit;
 }

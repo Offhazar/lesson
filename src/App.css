@@ -1,41 +1,103 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
 }
 body {
-  height: 570px;
+  background-color: linear-gradient(
+    90deg,
+    rgba(43, 14, 246, 1) 0%,
+    rgba(99, 118, 250, 1) 100%
+  );
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+img {
+  width: 200px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1 {
+  margin: 32px 0;
+  color: white;
+  background-color: black;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 50px;
+  border: 2px solid black;
+  border-radius: 11px;
+  box-shadow: 10px 5px 10px 5px black;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.complete {
+  text-decoration: line-through;
+  opacity: 0.4;
+}
+.todo-form {
+  margin-bottom: 32px;
+}
+.todo-input {
+  padding: 14px 32px 14px 16px;
+  border-radius: 20px;
+  border: 2px solid black;
+  outline: none;
+  width: 320px;
+  background-image: url(https://w7.pngwing.com/pngs/215/337/png-transparent-mercedes-benz-a-class-car-mini-cooper-luxury-vehicle-cars-logo-brands-angle-emblem-trademark.png);
+  color: black;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 15px;
+}
+.todo-input::placeholder {
+  color: rgb(126, 116, 116);
+}
+.todo-button {
+  padding: 16px;
+  border-color: black;
+  outline: none;
+  background-image: url(https://w7.pngwing.com/pngs/215/337/png-transparent-mercedes-benz-a-class-car-mini-cooper-luxury-vehicle-cars-logo-brands-angle-emblem-trademark.png);
+  border-radius: 20px;
+  color: rgb(23, 29, 24);
+  text-transform: capitalize;
+}
+.todo-input.edite {
+  border: 2px solid rgb(63, 63, 104);
+}
+.todo-container {
   display: flex;
   flex-direction: column;
+  position: relative;
+  height: 1200px;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.todo-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 4px auto;
+  color: rgb(255, 255, 255);
+  background-size: 140px;
+  padding: 16px;
+  border-radius: 16px;
+  width: 450px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 15px;
+}
+.todo-row:nth-child(4n + 1) {
+  /* background: linear-gradient(
+    90deg,
+    rgba(93, 12, 255, 1) 0%,
+    rgba(155, 0, 250, 1) 100%
+  ); */
+  background-image: url(https://wallpaperaccess.com/full/2628416.jpg);
+  background-size: 140px;
 }
 
-.App-link {
-  color: #61dafb;
+.todo-date {
+  height: 48px;
+  border-radius: 20px;
+  background-image: url(https://w7.pngwing.com/pngs/215/337/png-transparent-mercedes-benz-a-class-car-mini-cooper-luxury-vehicle-cars-logo-brands-angle-emblem-trademark.png);
+  border-color: black;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.done {
+  text-decoration: line-through;
+  color: red;
+  font-weight: bold;
+}
+.input2 {
+  font-size: 30px;
 }
