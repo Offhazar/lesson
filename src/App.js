@@ -22,17 +22,17 @@ function App() {
   };
 
   const AppFilter = (idSelect) => {
-     setUserList(preveUsersList => {
-       const AppDelat = preveUsersList.filter(item => item.id !== idSelect)
-       return AppDelat;
-     })
-  }
+    setUserList((preveUsersList) => {
+      const AppDelat = preveUsersList.filter((item) => item.id !== idSelect);
+      return AppDelat;
+    });
+  };
 
   return (
-    <div>
+    <>
       <AddUser onAddUser={addUserHundler} />
-      <UsersList users={userList} onFilter={AppFilter}/>
-    </div>
+      <UsersList users={userList} onFilter={AppFilter} />
+    </>
   );
 }
 

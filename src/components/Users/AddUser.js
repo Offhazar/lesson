@@ -44,7 +44,7 @@ const AddUser = (props) => {
   };
 
   return (
-    <div>
+    <>
       {error && (
         <ErrorModule
           title={error.title}
@@ -71,7 +71,7 @@ const AddUser = (props) => {
           <Button type="sumbit">Add User</Button>
         </form>
       </Card>
-    </div>
+    </>
   );
 };
 
