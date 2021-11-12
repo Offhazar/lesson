@@ -1,55 +1,88 @@
-.login {
-  width: 90%;
-  max-width: 40rem;
-  margin: 2rem auto;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Montserrat, sans-serif;
+  font-weight: 500;
+  background-color: #79ceff;
+  background-image: linear-gradient(
+    315deg,
+    #79ceff 0%,
+    #dcb5ff 67%,
+    #ffb8f0 100%
+  );
+  height: 100vh;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  color: #425a65;
+}
+.form {
+  width: 24rem;
   padding: 2rem;
+  border-radius: 1rem;
+  background-color: white;
 }
-
-.control {
-  margin: 1rem 0;
-  display: flex;
-  align-items: stretch;
-  flex-direction: column;
-}
-
-.control label,
-.control input {
-  display: block;
-}
-
-.control label {
-  font-weight: bold;
-  flex: 1;
-  color: #464646;
+.form__title {
   margin-bottom: 0.5rem;
 }
-
-.control input {
-  flex: 3;
-  font: inherit;
-  padding: 0.35rem 0.35rem;
-  border-radius: 6px;
-  border: 1px solid #ccc;
+.form__description {
+  margin-bottom: 2rem;
 }
-
-.control input:focus {
+.form__group {
+  position: relative;
+  height: 3rem;
+  margin-bottom: 1.5rem;
+}
+.form__input {
+  width: 100%;
+  height: 100%;
+  border: 2px solid #cfd8dc;
+  border-radius: 0.5rem;
+  font-family: inherit;
+  font-weight: inherit;
+  color: inherit;
   outline: none;
-  border-color: #4f005f;
-  background: #f6dbfc;
+  padding: 1.25rem;
+  background: none;
 }
-
-.control.invalid input {
-  border-color: red;
-  background: #fbdada;
+.form__input:hover {
+  border-color: #9dedff;
 }
-
-.actions {
-  text-align: center;
+.form__input:focus {
+  border-color: #7bdff6;
 }
-
-@media (min-width: 768px) {
-  .control {
-    align-items: center;
-    flex-direction: row;
-  }
+.form__label {
+  position: absolute;
+  left: 1rem;
+  top: 0.9rem;
+  padding: 0 0.5rem;
+  background-color: white;
+  transition: top 200ms ease-in, left 200ms ease-in, font-size 200ms ease-in;
+}
+.form__button {
+  display: block;
+  margin-left: auto;
+  padding: 0.75rem 2rem;
+  background-color: #9dedff;
+  font-family: inherit;
+  font-weight: inherit;
+  border-radius: 0.5rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: background-color 200ms ease-in;
+}
+.form__button:hover {
+  background-color: #7bdff6;
+}
+.form__input:focus ~ .form__label,
+.form__input:not(:placeholder-shown).form__input:not(:focus) ~ .form__label {
+  top: -0.5rem;
+  left: 0.8rem;
+  font-size: 0.8rem;
 }
