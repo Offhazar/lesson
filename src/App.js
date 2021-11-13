@@ -1,10 +1,8 @@
-import Login from './components/login/Login';
+import React from 'react';
+import FetchGet from './FetchGet';
 
 function App() {
-  return (
-    <>
-      <Login />
-    </>
-  );
+  return <FetchGet />;
 }
+
 export default App;

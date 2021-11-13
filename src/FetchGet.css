@@ -1,0 +1,22 @@
+.block {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 1300px;
+  margin: 0 auto;
+}
+.block2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.block3 {
+  border: 2px solid black;
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  font-size: 11px;
+}
